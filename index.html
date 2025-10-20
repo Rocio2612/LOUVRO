@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-widht">
+            <!-- titulo de la pagina-->
+        <title>Portafolio</title>
+            <!-- descripcion de la pagina al buscarla-->
+        <meta name="description" content="Estudiante de desarrollo de software">
+            <!-- OPEN GRAPH(buscar pag donde salen todos los elementos que existen)-->
+        <meta property="og:title" content="porfolio de una estudiante">
+            <!-- SEO-->
+        <link rel="alternate" href="">
+        <!-- -->
+        <meta name="robots" content="index.follow">
+            <!-- color de la barra de arriba-->
+        <meta name="theme-color" content="#09f">
+            <!-- imagen de la pagina-->
+        <link rel="icon" type="imagen/jpg" href="imagen/imagen-html.jpg">
+
+        <body>
+            <!--el header se mantiene constante-->
+            <header>
+               <h1>Portofolio Rocio</h1>
+               <!-- PONER VIDEO DE YT, EN COMPARTIR -INSERTAR Y COPIAR CODIGO-->
+             <!-- <iframe 
+                src="https://www.youtube.com/embed/3nYLTiY5skU?si=KF2-cMXb3oBXo1D8"
+                title="YouTube video player"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                style="width: 100%; aspect-ratio: 16/9;"></iframe> -->
+               <!-- navegar hacia tal seccion-->              
+                <nav>
+                <a href="#experiencia">experiencia</a>
+                <a href="#proyectos">proyectos</a>
+               <!-- uso el TARGET="_BLANK"para que abra otra pestaña y deje mi pag principal-->
+                <a 
+                href="https://www.youtube.com/watch?v=3nYLTiY5skU&t=57s"
+                target="_blank"
+                rel="noreferrer">youtube</a>
+               </nav>
+            </header>
+            <!-- HACER VIDEO
+            <video autoplay controls src="https://www.youtube.com/watch?v=aywq57MBAKE&list=PLvvIO-XvFOKyK_lk4UP_VTbjCLzm63Gjp">
+            </video>-->     
+            
+            <!-- representa una caja de diálogo-->
+            <dialog id="dialog">
+    <h1>¿Sabías que puedes abrir una modal así?</h1>
+    <p>Y es totalmente nativo</p>
+    <button id="close">Cerrar modal</button>
+</dialog>
+
+<button id="show">Ver más información</button>
+
+<script>
+    const showBtn = document.getElementById('show'); // boton para abrir
+    const modal = document.getElementById('dialog'); // el dialog
+    const closeBtn = document.getElementById('close'); // boton para cerrar
+
+    showBtn.addEventListener('click', () => {
+        modal.showModal(); // abrir modal
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.close(); // cerrar modal
+    });
+</script>
+
+            <!-- el main es lo q va cambiar constantemente si cambiamos de "pagina"-->
+            <main>
+            <p><strong>Estudiante de desarrollo de software </strong> y trabajo en comercio</p>
+
+            <h2 id="experiencia">Experiencia</h2>
+
+            <ul>
+                <li class="list-item"> Don Bosco-2022</li>
+                <li class="list-item">Itu-Actual</li>
+                <li class="list-item">Comercio-Actual</li>
+            </ul> 
+            <a download href="imagen/imagen-html.jpg">
+            <img 
+                id="photo-image"
+                width="200"
+                height="200"
+                title="foto chica" 
+                alt="chica sacando foto al paisaje" 
+                src="imagen/imagen-html.jpg">
+           </a>
+            <!--otro subtitulo , pongo id "el nombre del nav que puse para que me diriga a la pagina "-->
+            <h2 id="proyectos">Proyectos realizados</h2>
+            <!--representa una seccion de una pagina independiente -->
+            <aside>
+                <!-- define contenido inroductorio-->
+                <header>
+                    <h3>Mis tecnologias favoritas</h3>
+                </header>
+                <!--lista ordenada -->
+                <ol type="A">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ol>
+            </aside>
+            <button type="submit">
+                click aqui
+            </button>
+
+            <!--marcar seccion independiente genericas de un documento  -->
+            <section>
+                <!--conjunto que tiene sentido si lo sacamos  -->
+                <article>
+                    <header>
+                        <h4>sitio web corporativo</h4>
+                    </header>
+                    <p>
+                        desarrolo de un sitio web corporativo
+                    </p>
+                    <!-- pie de pagina-->
+                    <footer>
+                        <!-- small: se usa para algo no tan importante-->
+                        <small>tecnologia utilzadas: mongo db</small>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h4>sitio web corporativo</h4>
+                    </header>
+                    <p>
+                        desarrolo de un sitio web corporativo
+                    </p>
+                    <!-- pie de pagina-->
+                    <footer>
+                        <!-- small: se usa para algo no tan importante-->
+                        <small>tecnologia utilzadas:mongo db </small>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h4>sitio web corporativo</h4>
+                    </header>
+                    <p>
+                        desarrolo de un sitio web corporativo
+                    </p>
+                    <!-- pie de pagina-->
+                    <footer>
+                        <!-- small: se usa para algo no tan importante-->
+                        <small>tecnologia utilzadas: mongo db </small>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <h2>formulario de contacto</h2>
+                <form method="post" action="/">
+                    <fieldset>
+                        <legend>informacion personal</legend>
+                    <!--el div para que el email este abajo , salto linea--> 
+                    <div>
+                      <label>nombre: 
+                        <input 
+                         type="text"
+                         name="name" 
+                         placeholder="nombre" required>
+                        </label>
+                        <label>email: 
+                        <input 
+                         type="email"
+                         name="email" 
+                         placeholder="email" required>
+                        </label>
+                        <label>celular: 
+                        <input 
+                         type="tel"
+                         name="celular" 
+                         placeholder="celular" required>
+                        </label>
+                        </div>  
+                        <div>
+                            <datalist id="languajes">
+    
+                                <option value="JavaScript"></option>
+                                <option value="Phyton"></option>
+                                <option value="Java"></option>
+                            </datalist>
+                            <label>con que lenguaje quieres que te ayude
+                                <input list="languajes" name="languajes">
+                            </label>
+                        </div>
+                    </fieldset>
+                <input type="submit" value="enviar contacto">
+                </form>
+            </section>
+        </main>
+        <footer>
+            copyright el porfolio unico
+            <a href="correarocio510@gmail.com">Enviar email</a>
+            <a href="tel: 2615034506">Llamar</a>
+            
+
+        </footer>
+        </body>
+    </head>
+</html>
+
